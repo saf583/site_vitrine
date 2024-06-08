@@ -1,0 +1,64 @@
+{{define "content"}}
+<main>
+    <section class="presentation">
+        <h1>Des cadeaux d'exception pour raviver l'émerveillement de vos proches</h1>
+        <button>Démarrer</button>
+    </section>
+    <section class="search">
+        <h2>Idées de cadeaux</h2>
+        <form>
+            <label for="event">Événement :</label>
+            <select id="event" name="event">
+                <option value="anniversaire">Anniversaire</option>
+                <option value="noel">Ste Valentin</option>
+                <option value="naissance">Mariage</option>
+                <option value="autres"></option>
+            </select>
+            <label for="sexe">Sexe :</label>
+            <select id="sexe" name="sexe">
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+                <option value="autres">Autres</option>
+            </select>
+            <label for="age">Âge :</label>
+            <input type="number" id="age" name="age">
+            <button type="submit">Rechercher</button>
+        </form>
+    </section>
+    <section class="popular-categories">
+        <h2>Catégories populaires</h2>
+        <ul>
+            <li><img src="/static/images/accueil/complet.jpg" alt="Mask"><p>Mask</p></li>
+            <li><img src="/static/images/accueil/boucles.jpeg" alt="Bijoux"><p>Bijoux</p></li>
+            <li><img src="/static/images/accueil/WhatsApp Image 2024-03-22 at 12.42.55 (1).jpeg" alt="Technologie"><p>Technologie</p></li>
+            <li><img src="/static/images/accueil/complet.jpg" alt="Mask"><p>Mask</p></li>
+            <li><img src="/static/images/accueil/boucles.jpeg" alt="Bijoux"><p>Bijoux</p></li>
+            <!-- Ajoutez plus d'éléments selon les besoins -->
+        </ul>
+    </section>
+    <section class="current-gifts">
+        <h2>Cadeaux du moment</h2>
+        <div class="gifts-grid">
+            <div class="gift"><img src="/static/images/accueil/complet.jpg" alt="Gift 1"><p>Voyage surprise</p></div>
+            <div class="gift"><img src="/static/images/accueil/boucles.jpeg" alt="Gift 2"><p>Robe élégante</p></div>
+            <div class="gift"><img src="/static/images/accueil/WhatsApp Image 2024-03-22 at 12.42.55 (1).jpeg" alt="Gift 3"><p>Montre</p></div>
+            <!-- Ajoutez plus de cadeaux selon les besoins -->
+        </div>
+    </section>
+    <section class="mixed-gifts">
+        <h2>Cadeaux d'Amour Mixtes</h2>
+        <div class="mixed-gifts-grid">
+            <div class="gift"><img src="wedding.jpg" alt="Mariage"><p>Mariage</p></div>
+            <div class="gift"><img src="valentine.jpg" alt="St Valentin"><p>St Valentin</p></div>
+            <div class="gift"><img src="anniversary.jpg" alt="Anniversaire"><p>Anniversaire</p></div>
+            <!-- Ajoutez plus de catégories selon les besoins -->
+        </div>
+    </section>
+    <section class="our-story">
+        <h2>Our Story</h2>
+        <p>Découvrez notre histoire et ce qui rend nos cadeaux uniques et spéciaux.</p>
+        <img src="our-story.jpg" alt="Our Story">
+    </section>
+</main>
+{{end}}
+<script src="/static/js/style.js"></script>

@@ -1,0 +1,254 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif; /* Police de caractères générale */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Couleur de fond générale */
+    color: #333; /* Couleur du texte générale */
+}
+
+/* En-tête et navigation */
+header {
+    background-color: #0073e6; /* Couleur de fond de l'en-tête */
+    color: white; /* Couleur du texte de l'en-tête */
+    padding: 10px 0; /* Espacement interne de l'en-tête */
+}
+
+header nav ul {
+    list-style: none; /* Suppression des puces de la liste */
+    display: flex;
+    justify-content: center; /* Centrer les éléments du menu */
+    padding: 0;
+    justify-content: flex-start;
+}
+
+header nav ul li {
+    margin: 0 15px; /* Espacement entre les éléments du menu */
+}
+
+header nav ul li a {
+    color: white; /* Couleur du texte des liens de navigation */
+    text-decoration: none; /* Suppression du soulignement des liens */
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline; /* Ajout d'un soulignement au survol */
+}
+
+/* Section de présentation */
+section.presentation {
+    background-color: #ffffff; /* Couleur de fond de la section de présentation */
+    text-align: center;
+    padding: 50px 20px; /* Espacement interne de la section */
+    border-bottom: 2px solid #0073e6; /* Bordure en bas de la section */
+}
+
+section.presentation h1 {
+    color: #0073e6; /* Couleur du texte du titre */
+    
+}
+
+section.presentation button {
+    background-color: #0073e6; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none;
+    padding: 10px 20px; /* Espacement interne du bouton */
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Espacement au-dessus du bouton */
+}
+
+section.presentation button:hover {
+    background-color: #005bb5; /* Couleur de fond du bouton au survol */
+}
+
+/* Section de recherche */
+section.search {
+    background-color: #e6f2ff; /* Couleur de fond de la section de recherche */
+    padding: 20px;
+    border-bottom: 2px solid #0073e6; /* Bordure en bas de la section */
+    text-align: center; /* Centrer le texte */
+}
+
+section.search form {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centrer les éléments du formulaire */ 
+    justify-content: center;
+}
+form label, form select, form input, form button {
+    margin: 10px;
+  }
+
+section.search label {
+    margin-top: 10px; /* Espacement au-dessus des étiquettes */
+}
+section.search button {
+    background-color: #0073e6; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Espacement au-dessus du bouton */
+}
+
+section.search button:hover {
+    background-color: #005bb5; /* Couleur de fond du bouton au survol */
+}
+
+
+/* Section des catégories populaires */
+section.popular-categories {
+    background-color: #ffffff; /* Couleur de fond de la section */
+    padding: 30px; /* Espacement interne de la section */
+    text-align: center; /* Centrer le texte */
+}
+
+section.popular-categories h2 {
+
+    margin-bottom: 20px; /* Espacement en bas du titre */
+    
+    justify-content: flex-start;
+
+}
+
+section.popular-categories ul {
+    list-style: none; /* Suppression des puces de la liste */
+    display: flex; /* Disposition en flexbox */
+    justify-content: center; /* Centrer les éléments */
+    flex-wrap: wrap; /* Permettre le retour à la ligne */
+    gap: 30px; /* Espacement entre les éléments */
+}
+
+section.popular-categories ul li {
+    background-color: #e6f2ff; /* Couleur de fond des éléments */
+    border: 1px solid #0073e6; /* Bordure des éléments */
+    border-radius: 5px; /* Coins arrondis des éléments */
+    width: 250px; /* Largeur fixe des éléments */
+    text-align: center; /* Centrer le texte des éléments */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition pour les effets */
+    padding: 10px;
+    margin: 10px; /* Espacement entre les éléments */
+    display: flex; /* Disposition en flexbox pour centrer le contenu */
+    flex-direction: column; /* Disposition en colonne */
+    justify-content: center; /* Centrer le contenu verticalement */
+    align-items: center; /* Centrer le contenu horizontalement */
+
+}
+
+section.popular-categories ul li:hover {
+    transform: scale(1.05); /* Agrandir légèrement l'élément au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre au survol */
+}
+
+section.popular-categories ul li img {
+    width: 100%; /* Largeur de l'image */
+    height: 100%; /* Hauteur de l'image */
+    object-fit: cover; /* L'image couvre entièrement la case */
+    border-radius: 5px; /* Coins arrondis des images */
+    margin-bottom: 15px; /* Espacement en bas des images */
+}
+section.popular-categories ul li p {
+    color: #333; /* Couleur du texte */
+    font-size: 14px; /* Taille de police du texte */
+    margin: 0; /* Suppression des marges */
+}
+
+/* Section des cadeaux du moment */
+section.current-gifts {
+    background-color: #ffffff; /* Couleur de fond de la section */
+    padding: 20px; /* Espacement interne de la section */
+    text-align: center; /* Centrer le texte */
+}
+
+section.current-gifts h2 {
+   
+    margin-bottom: 20px; /* Espacement en bas du titre */
+}
+
+section.current-gifts .gifts-grid {
+    display: flex; /* Disposition en flexbox */
+    flex-wrap: wrap; /* Permettre le retour à la ligne */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    
+}
+
+section.current-gifts .gift {
+ 
+    border: 1px solid #0073e6; /* Bordure des éléments */
+    border-radius: 5px; /* Coins arrondis des éléments */
+    width: 250px; /* Largeur fixe des éléments */
+    text-align: center; /* Centrer le texte des éléments */
+    padding: 10px;
+    margin: 10px; /* Espacement entre les éléments */
+    display: flex; /* Disposition en flexbox pour centrer le contenu */
+    flex-direction: column; /* Disposition en colonne */
+    justify-content: center; /* Centrer le contenu verticalement */
+    align-items: center; /* Centrer le contenu horizontalement */
+}
+
+section.current-gifts .gift img {
+    width: 100%; /* Largeur de l'image */
+    height: 100%; /* Hauteur de l'image */
+    object-fit: cover; /* L'image couvre entièrement la case */
+    border-radius: 5px; /* Coins arrondis des images */
+    margin-bottom: 15px; /* Espacement en bas des images */
+}
+section.current-gifts .gift:hover {
+    transform: scale(1.05);
+    background-color: #3c98ee; /* Change la couleur de fond au survol */
+    border-radius: 10px; /* Augmente le rayon des bordures au survol */
+    transition: transform 0.3s, box-shadow 1.05s, background-color 0.3s, border-radius 0.3s;
+}
+
+section.current-gifts .gift p {
+    color: #333; /* Couleur du texte */
+    font-size: 14px; /* Taille de police du texte */
+    margin: 0; /* Suppression des marges */
+    margin-top: 10px; /* Espacement en haut du texte */
+}
+
+
+
+
+
+/* Section de contact */
+section.contact {
+    background-color: #e6f2ff; /* Couleur de fond de la section */
+    padding: 20px;
+    text-align: center;
+}
+
+section.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer les éléments du formulaire */
+}
+
+section.contact label {
+    margin-top: 10px; /* Espacement au-dessus des étiquettes */
+}
+
+section.contact button {
+    background-color: #0073e6; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Espacement au-dessus du bouton */
+}
+
+section.contact button:hover {
+    background-color: #005bb5; /* Couleur de fond du bouton au survol */
+}
+
+/* Pied de page */
+footer {
+    background-color: #0073e6; /* Couleur de fond du pied de page */
+    color: white; /* Couleur du texte du pied de page */
+    text-align: center;
+    padding: 10px 0;
+}
