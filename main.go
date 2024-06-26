@@ -15,9 +15,10 @@ func main() {
 	router.HandleFunc("/achat", controllers.AchatHandler)
 	router.HandleFunc("/contact", controllers.ContactHandler)
 	router.HandleFunc("/evenement", controllers.EvenementHandler)
+	router.HandleFunc("/compte", controllers.CompteHandler)
 
 	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./static/"))))
 
-	fmt.Println("http://localhost:8080")
-	http.ListenAndServe(":8080", router)
+	fmt.Println("http://localhost:8081")
+	http.ListenAndServe(":8081", router)
 }

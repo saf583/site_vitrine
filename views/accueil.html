@@ -9,6 +9,7 @@
         <form>
             <label for="event">Événement :</label>
             <select id="event" name="event">
+                <option value="rien"></option>
                 <option value="anniversaire">Anniversaire</option>
                 <option value="noel">Ste Valentin</option>
                 <option value="naissance">Mariage</option>
@@ -16,6 +17,7 @@
             </select>
             <label for="sexe">Sexe :</label>
             <select id="sexe" name="sexe">
+                <option value="rien"></option>
                 <option value="homme">Homme</option>
                 <option value="femme">Femme</option>
                 <option value="autres">Autres</option>
@@ -40,17 +42,21 @@
         <h2>Cadeaux du moment</h2>
         <div class="gifts-grid">
             <div class="gift"><img src="/static/images/accueil/complet.jpg" alt="Gift 1"><p>Voyage surprise</p></div>
+            <div class="gift"><img src="/static/images/accueil/WhatsApp Image 2024-03-22 at 12.42.55 (1).jpeg" alt="Gift 3"><p>Montre</p></div>
             <div class="gift"><img src="/static/images/accueil/boucles.jpeg" alt="Gift 2"><p>Robe élégante</p></div>
             <div class="gift"><img src="/static/images/accueil/WhatsApp Image 2024-03-22 at 12.42.55 (1).jpeg" alt="Gift 3"><p>Montre</p></div>
+            <div class="gift"><img src="/static/images/accueil/WhatsApp Image 2024-03-22 at 12.42.55 (1).jpeg" alt="Gift 3"><p>Montre</p></div>
+            <div class="gift"><img src="/static/images/accueil/WhatsApp Image 2024-03-22 at 12.42.55 (1).jpeg" alt="Gift 3"><p>Montre</p></div>
+            
             <!-- Ajoutez plus de cadeaux selon les besoins -->
         </div>
     </section>
-    <section class="mixed-gifts">
+    <section class="mixed">
         <h2>Cadeaux d'Amour Mixtes</h2>
-        <div class="mixed-gifts-grid">
-            <div class="gift"><img src="wedding.jpg" alt="Mariage"><p>Mariage</p></div>
-            <div class="gift"><img src="valentine.jpg" alt="St Valentin"><p>St Valentin</p></div>
-            <div class="gift"><img src="anniversary.jpg" alt="Anniversaire"><p>Anniversaire</p></div>
+        <div class="mixed-grid">
+            <div class="cadeaux"><img src="/static/images/accueil/complet.jpg" alt="Mariage"><p>Mariage</p></div>
+            <div class="cadeaux"><img src="/static/images/accueil/complet.jpg" alt="St Valentin"><p>St Valentin</p></div>
+            <div class="cadeaux"><img src="/static/images/accueil/complet.jpg" alt="Anniversaire"><p>Anniversaire</p></div>
             <!-- Ajoutez plus de catégories selon les besoins -->
         </div>
     </section>
@@ -61,4 +67,3 @@
     </section>
 </main>
 {{end}}
-<script src="/static/js/style.js"></script>

@@ -18,7 +18,11 @@ func ContactHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func EvenementHandler(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "Evenement", nil)
+	renderTemplate(w, "evenement", nil)
+}
+
+func CompteHandler(w http.ResponseWriter, r *http.Request) {
+	renderTemplate(w, "compte", nil)
 }
 
 func renderTemplate(w http.ResponseWriter, tmpl string, data interface{}) {

@@ -157,98 +157,209 @@ section.popular-categories ul li p {
 }
 
 /* Section des cadeaux du moment */
-section.current-gifts {
-    background-color: #ffffff; /* Couleur de fond de la section */
-    padding: 20px; /* Espacement interne de la section */
-    text-align: center; /* Centrer le texte */
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
 }
 
-section.current-gifts h2 {
-   
-    margin-bottom: 20px; /* Espacement en bas du titre */
+.current-gifts {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
 }
 
-section.current-gifts .gifts-grid {
-    display: flex; /* Disposition en flexbox */
-    flex-wrap: wrap; /* Permettre le retour à la ligne */
-    justify-content: center; /* Centrer les éléments horizontalement */
-    
+.current-gifts h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-section.current-gifts .gift {
- 
-    border: 1px solid #0073e6; /* Bordure des éléments */
-    border-radius: 5px; /* Coins arrondis des éléments */
-    width: 250px; /* Largeur fixe des éléments */
-    text-align: center; /* Centrer le texte des éléments */
-    padding: 10px;
-    margin: 10px; /* Espacement entre les éléments */
-    display: flex; /* Disposition en flexbox pour centrer le contenu */
-    flex-direction: column; /* Disposition en colonne */
-    justify-content: center; /* Centrer le contenu verticalement */
-    align-items: center; /* Centrer le contenu horizontalement */
+.gifts-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    margin: auto;
 }
 
-section.current-gifts .gift img {
-    width: 100%; /* Largeur de l'image */
-    height: 100%; /* Hauteur de l'image */
-    object-fit: cover; /* L'image couvre entièrement la case */
-    border-radius: 5px; /* Coins arrondis des images */
-    margin-bottom: 15px; /* Espacement en bas des images */
+.gift {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-section.current-gifts .gift:hover {
+
+.gift img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.gift p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.gift:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+.gift:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.gift:hover {
     transform: scale(1.05);
-    background-color: #3c98ee; /* Change la couleur de fond au survol */
-    border-radius: 10px; /* Augmente le rayon des bordures au survol */
-    transition: transform 0.3s, box-shadow 1.05s, background-color 0.3s, border-radius 0.3s;
 }
 
-section.current-gifts .gift p {
-    color: #333; /* Couleur du texte */
-    font-size: 14px; /* Taille de police du texte */
-    margin: 0; /* Suppression des marges */
-    margin-top: 10px; /* Espacement en haut du texte */
+.gift:hover img {
+    transform: rotate(0deg);
 }
 
-
-
-
-
-/* Section de contact */
-section.contact {
-    background-color: #e6f2ff; /* Couleur de fond de la section */
-    padding: 20px;
-    text-align: center;
+.gift:hover p {
+    background-color: rgba(240, 220, 220, 0.9);
+    color: #333;
 }
 
-section.contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrer les éléments du formulaire */
+/* Décalage pour les éléments centraux */
+.gift:nth-child(2),
+.gift:nth-child(5) {
+    margin-top: -10px; /* Décalage vers le haut pour les éléments centraux */
 }
 
-section.contact label {
-    margin-top: 10px; /* Espacement au-dessus des étiquettes */
+@media (max-width: 768px) {
+    .gifts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gift {
+        width: calc(50% - 20px);
+    }
 }
 
-section.contact button {
-    background-color: #0073e6; /* Couleur de fond du bouton */
-    color: white; /* Couleur du texte du bouton */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px; /* Espacement au-dessus du bouton */
+@media (max-width: 480px) {
+    .gifts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gift {
+        width: 100%;
+    }
 }
 
-section.contact button:hover {
-    background-color: #005bb5; /* Couleur de fond du bouton au survol */
-}
-
+    /* Cadeaux mixte */
+    section.mixed {
+        background-color: #ffffff; /* Couleur de fond de la section */
+        padding: 30px; /* Espacement interne de la section */
+        text-align: center; /* Centrer le texte */
+    }
+    
+    section.mixed h2 {
+        margin-bottom: 20px; /* Espacement en bas du titre */
+    }
+    
+    section.mixed .mixed-grid {
+        display: flex; /* Disposition en flexbox */
+        justify-content: center; /* Centrer les éléments */
+        flex-wrap: wrap; /* Permettre le retour à la ligne */
+        gap: 30px; /* Espacement entre les éléments */
+    }
+    
+    section.mixed .mixed-grid .cadeaux {
+        background-color: #e6f2ff; /* Couleur de fond des éléments */
+        border: 1px solid #0073e6; /* Bordure des éléments */
+        border-radius: 5px; /* Coins arrondis des éléments */
+        width: 250px; /* Largeur fixe des éléments */
+        text-align: center; /* Centrer le texte des éléments */
+        transition: transform 0.3s, box-shadow 0.3s; /* Transition pour les effets */
+        padding: 10px;
+        margin: 10px; /* Espacement entre les éléments */
+        display: flex; /* Disposition en flexbox pour centrer le contenu */
+        flex-direction: column; /* Disposition en colonne */
+        justify-content: center; /* Centrer le contenu verticalement */
+        align-items: center; /* Centrer le contenu horizontalement */
+    }
+    
+    section.mixed .mixed-grid .cadeaux:hover {
+        transform: scale(1.05); /* Agrandir légèrement l'élément au survol */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre au survol */
+    }
+    
+    section.mixed .mixed-grid .cadeaux img {
+        width: 100%; /* Largeur de l'image */
+        height: 100%; /* Hauteur de l'image */
+        object-fit: cover; /* L'image couvre entièrement la case */
+        border-radius: 5px; /* Coins arrondis des images */
+        margin-bottom: 15px; /* Espacement en bas des images */
+    }
+    
+    section.mixed .mixed-grid .cadeaux p {
+        color: #333; /* Couleur du texte */
+        font-size: 14px; /* Taille de police du texte */
+        margin: 0; /* Suppression des marges */
+    }
+    
 /* Pied de page */
+/* Styles du pied de page */
 footer {
-    background-color: #0073e6; /* Couleur de fond du pied de page */
-    color: white; /* Couleur du texte du pied de page */
-    text-align: center;
-    padding: 10px 0;
+    background-color: #0073e6; /* Définit la couleur de fond du pied de page en bleu */
+    color: #fff; /* Définit la couleur du texte en blanc */
+    padding: 20px 0; /* Ajoute un espace de 20 pixels en haut et en bas */
+    text-align: center; /* Centre le texte à l'intérieur du pied de page */
 }
+
+/* Conteneur principal du contenu du pied de page */
+.footer-content {
+    max-width: 1200px; /* Limite la largeur maximale du contenu à 1200 pixels */
+    margin: auto; /* Centre le conteneur horizontalement */
+    padding: 20px; /* Ajoute un espace de 20 pixels tout autour du contenu */
+    display: flex; /* Utilise le modèle flexbox pour aligner les éléments enfants */
+    flex-direction: column; /* Aligne les éléments enfants en colonne */
+    align-items: center; /* Centre les éléments enfants horizontalement */
+}
+
+/* Styles pour les liens de navigation dans le pied de page */
+.footer-nav a {
+    color: #fff; /* Définit la couleur des liens en blanc */
+    margin: 0 15px; /* Ajoute une marge de 15 pixels à gauche et à droite de chaque lien */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+}
+
+/* Styles pour les liens de navigation au survol */
+.footer-nav a:hover {
+    text-decoration: underline; /* Ajoute un soulignement aux liens lorsqu'ils sont survolés */
+}
+
+/* Conteneur pour les icônes sociales */
+.social-icons {
+    margin: 20px 0; /* Ajoute une marge de 20 pixels en haut et en bas */
+}
+
+/* Styles pour les liens des icônes sociales */
+.social-icons a {
+    color: #fff; /* Définit la couleur des icônes sociales en blanc */
+    margin: 0 10px; /* Ajoute une marge de 10 pixels à gauche et à droite de chaque icône */
+    font-size: 20px; /* Définit la taille de la police des icônes sociales */
+}
+
+/* Styles pour les icônes sociales au survol */
+.social-icons a:hover {
+    color: #f0c040; /* Change la couleur des icônes sociales en jaune orangé lorsqu'elles sont survolées */
+}
+
+
